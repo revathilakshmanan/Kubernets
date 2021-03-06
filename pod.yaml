@@ -1,0 +1,11 @@
+apiVerison: v1
+kind: Pod
+metadata:
+  name: pod
+  labels:
+    app: myapp
+spec:
+   containers:
+     - name: ng
+       image: nginx 
+   
