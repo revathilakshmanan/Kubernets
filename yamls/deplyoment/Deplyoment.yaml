@@ -1,0 +1,21 @@
+apiVersion: apps/ v1
+kind: Deployment
+metadata:
+  name: deployment
+  lables:
+    app: myapp
+spec:
+   selector: 
+     matchLable:
+       app: myapp
+   replicas: 3
+   template:
+     metadata:
+       name: mypod
+       lables:
+         app: myapp
+     spec:    
+       contaniers:
+         - name: ng
+           imgae: nginx
+
